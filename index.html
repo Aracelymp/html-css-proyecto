@@ -1,11 +1,219 @@
 <!DOCTYPE html>
-<html lang="es-CLs">
+<html lang="es-CL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+
+    <title>AriPapelería 💗</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
+
 <body>
-    
+
+    <header class="encabezado-ari">
+
+        <div class="logo-container">
+            <a href="index.html" aria-label="Ir al inicio de AriPapelería">
+                <img
+                    src="img/milogo.png"
+                    alt="Logo de AriPapelería"
+                    class="logo-ari"
+                >
+            </a>
+        </div>
+
+        <nav class="menu-principal" aria-label="Navegación principal">
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#packaging">Packaging</a>
+                </li>
+
+                <li>
+                    <a href="#planners">Planners</a>
+                </li>
+
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+
+                <li>
+                    <button
+                        type="button"
+                        class="circulo-carrito"
+                        aria-label="Ver carrito de compras"
+                    >
+                        🛒
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="contenedor-principal" aria-labelledby="titulo-principal">
+
+            <div class="row">
+
+                <div class="col-6">
+
+                    <div class="row mosaico-row">
+
+                        <article class="col-6">
+                            <img
+                                src="img/imagen1.jpeg"
+                                alt="Productos de AriPapelería"
+                                class="mosaico"
+                            >
+                        </article>
+
+                        <article class="col-6">
+                            <img
+                                src="img/imagen2.jpeg"
+                                alt="Papelería personalizada"
+                                class="mosaico"
+                            >
+                        </article>
+
+                        <article class="col-4">
+                            <img
+                                src="img/imagen3.jpeg"
+                                alt="Productos personalizados"
+                                class="mosaico"
+                            >
+                        </article>
+
+                        <article class="col-8">
+                            <img
+                                src="img/imagen4.jpeg"
+                                alt="Detalles y productos de papelería"
+                                class="mosaico"
+                            >
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+
+                <article class="col-6 texto-new">
+
+                    <h1 id="titulo-principal">
+                        Personaliza tu pyme
+                    </h1>
+
+                    <p class="descripcion-ari">
+                        En Ari Papelería ✨ encuentras todo para darle un
+                        toque personal a tus envíos 🛻, ordenar tu día a día 📒
+                        o preparar ese regalo especial 🎁, hecho con amor 🥰.
+                    </p>
+
+                    <a href="#packaging" class="mi-boton">
+                        <span class="learn-more">
+
+                            <span
+                                class="circle"
+                                aria-hidden="true"
+                            >
+                                <span class="icon arrow"></span>
+                            </span>
+
+                            <span class="button-text">
+                                Compra aquí
+                            </span>
+
+                        </span>
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section id="packaging" class="seccion-contenido">
+
+            <h2>Packaging</h2>
+
+            <p>
+                Encuentra productos personalizados para darle un toque
+                especial a tus envíos.
+            </p>
+
+        </section>
+
+
+        <section id="planners" class="seccion-contenido">
+
+            <h2>Planners</h2>
+
+            <p>
+                Organiza tu día a día con nuestros planners y productos
+                de papelería.
+            </p>
+
+        </section>
+
+
+        <section id="contacto" class="seccion-contenido">
+
+            <h2>Contacto</h2>
+
+            <p>
+                ¿Tienes alguna consulta? Contáctanos y estaremos felices
+                de ayudarte.
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+    <a
+        href="https://wa.me/56912345678"
+        class="whatsapp-flotante"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp"
+    >
+        💬
+    </a>
+
+
+    <footer class="footer-ari">
+
+        <p>Ari Papelería 💗</p>
+
+        <p>
+            Instagram:
+            <a
+                href="https://www.instagram.com/aripapeleria_/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                @aripapeleria_
+            </a>
+        </p>
+
+        <p>
+            Contacto:
+            <a href="tel:+56964798741">
+                +56 9 6479 8741
+            </a>
+        </p>
+
+    </footer>
+
 </body>
 </html>
