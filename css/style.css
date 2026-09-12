@@ -1,4 +1,902 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+/* 
+   CONFIGURACIÓN GENERAL
+ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #d8b4fe,
+        #fbcfe8,
+        #e9d5ff
+    );
+
+    color: #4a285f;
+}
+
+
+/* 
+   ENCABEZADO - LOS 3 HTML
+ */
+
+.encabezado-ari {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 7%;
+
+    background-color: rgba(255, 255, 255, 0.85);
+
+    box-shadow: 0 4px 15px rgba(90, 45, 110, 0.10);
+}
+
+
+/*
+   LOGO
+ */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-ari {
+    width: 100px;
+    height: auto;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.logo-ari:hover {
+    transform: scale(1.05);
+}
+
+
+/* 
+   MENÚ DE NAVEGACIÓN
+ */
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.menu-principal a {
+    text-decoration: none;
+
+    color: #633878;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    transition: all 0.3s ease;
+}
+
+.menu-principal a:hover {
+    background-color: #d8a7e8;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* 
+   BOTÓN CARRITO
+ */
+
+.boton-carrito {
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    background-color: #a85bbd;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.boton-carrito:hover {
+    background-color: #8e4ca3;
+
+    transform: translateY(-2px);
+}
+
+
+/* 
+   INICIO - CONTENEDOR PRINCIPAL
+ */
+
+.contenedor-principal {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 60px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    align-items: center;
+}
+
+
+/* 
+   MOSAICO DE IMÁGENES
+ */
+
+.mosaico {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.mosaico article {
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(80, 40, 100, 0.15);
+}
+
+.mosaico img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.mosaico article:hover img {
+    transform: scale(1.05);
+}
+
+
+/* 
+   TEXTO DEL INICIO
+ */
+
+.texto-new {
+    padding: 30px;
+}
+
+.texto-new h1 {
+    color: #71398b;
+
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.descripcion-ari {
+    color: #65466f;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/*
+   BOTÓN "COMPRA AQUÍ"
+*/
+.mi-boton {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #a85bbd,
+        #d88bcf
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    box-shadow: 0 7px 18px rgba(120, 55, 140, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.mi-boton:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(120, 55, 140, 0.35);
+}
+
+
+/* 
+   SECCIONES DEL INICIO
+ */
+
+.seccion-contenido {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    background-color: rgba(255, 255, 255, 0.80);
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(90, 45, 110, 0.10);
+}
+
+.seccion-contenido h2 {
+    color: #71398b;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.seccion-contenido p {
+    color: #65466f;
+
+    line-height: 1.7;
+}
+
+
+/* 
+   REGISTER Y LOGIN
+ */
+
+.contenedor-formulario {
+    width: 100%;
+
+    min-height: calc(100vh - 180px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+
+/* 
+   TARJETA DEL FORMULARIO
+ */
+
+.formulario-card {
+    width: 100%;
+
+    max-width: 550px;
+
+    padding: 40px;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(91, 45, 110, 0.20);
+}
+
+
+/* 
+   TÍTULO DEL FORMULARIO
+ */
+
+.formulario-card h1 {
+    text-align: center;
+
+    color: #7b3f98;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+/* 
+   DESCRIPCIÓN
+ */
+
+.formulario-descripcion {
+    text-align: center;
+
+    color: #765c80;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* 
+   CAMPOS DEL FORMULARIO
+ */
+
+.campo-formulario {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.campo-formulario label {
+    margin-bottom: 8px;
+
+    color: #59326c;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.campo-formulario input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 2px solid #ead8ef;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background-color: white;
+
+    color: #4a285f;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+}
+
+.campo-formulario input:focus {
+    border-color: #b875ca;
+
+    box-shadow:
+        0 0 0 3px rgba(184, 117, 202, 0.15);
+}
+
+.campo-formulario input::placeholder {
+    color: #b4a3b9;
+}
+
+
+/* 
+   MENSAJE DE AYUDA
+ */
+
+.mensaje-ayuda {
+    margin-top: 6px;
+
+    color: #927e98;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* 
+   MENSAJES DE ERROR
+ */
+
+.mensaje-error {
+    display: block;
+
+    min-height: 16px;
+
+    margin-top: 5px;
+
+    color: #c0395b;
+
+    font-size: 12px;
+}
+
+
+/* 
+   CHECKBOX
+ */
+
+.campo-checkbox {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin: 10px 0;
+
+    color: #65466f;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.campo-checkbox input {
+    width: 17px;
+    height: 17px;
+
+    margin-top: 2px;
+
+    accent-color: #a85bbd;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.campo-checkbox label {
+    cursor: pointer;
+}
+
+
+/* 
+   NEWSLETTER
+ */
+
+.newsletter {
+    padding: 14px;
+
+    margin-top: 18px;
+    margin-bottom: 25px;
+
+    background-color: #faf2fc;
+
+    border: 1px solid #eedcf2;
+
+    border-radius: 12px;
+}
+
+
+/* 
+   BOTÓN DE FORMULARIO
+ */
+
+.boton-formulario {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #a85bbd,
+        #d88bcf
+    );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px rgba(120, 55, 140, 0.20);
+
+    transition: all 0.3s ease;
+}
+
+.boton-formulario:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 20px rgba(120, 55, 140, 0.30);
+}
+
+.boton-formulario:active {
+    transform: translateY(0);
+}
+
+
+/* 
+   MENSAJE DE REGISTRO / LOGIN
+ */
+
+.mensaje-registro {
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* 
+   ENLACES DE LOGIN Y REGISTRO
+ */
+
+.enlace-login {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #765c80;
+
+    font-size: 14px;
+}
+
+.enlace-login a,
+.enlace-inicio a {
+    color: #8e4ca3;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.enlace-login a:hover,
+.enlace-inicio a:hover {
+    text-decoration: underline;
+}
+
+
+/* 
+   VOLVER AL INICIO
+ */
+
+.enlace-inicio {
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* 
+   WHATSAPP
+ */
+
+.whatsapp-flotante {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #25d366;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.20);
+
+    transition: transform 0.3s ease;
+
+    z-index: 1000;
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.1);
+}
+
+
+/* 
+   FOOTER
+ */
+
+.footer-ari {
+    width: 100%;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.85);
+
+    color: #765c80;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.footer-ari a {
+    color: #8e4ca3;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.footer-ari a:hover {
+    text-decoration: underline;
+}
+
+
+/* 
+   SISTEMA DE COLUMNAS
+ */
+
+.row {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    width: 8.333%;
+}
+
+.col-2 {
+    width: 16.666%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.333%;
+}
+
+.col-5 {
+    width: 41.666%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.333%;
+}
+
+.col-8 {
+    width: 66.666%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.333%;
+}
+
+.col-11 {
+    width: 91.666%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+/* 
+   RESPONSIVE - CELULAR Y TABLET
+ */
+
+@media (max-width: 768px) {
+
+    /* ENCABEZADO */
+
+    .encabezado-ari {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+
+    /* MENÚ */
+
+    .menu-principal {
+        justify-content: center;
+    }
+
+    .menu-principal a {
+        font-size: 13px;
+
+        padding: 8px 10px;
+    }
+
+
+    /* INICIO */
+
+    .contenedor-principal {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        margin: 35px auto;
+    }
+
+    .texto-new {
+        padding: 20px;
+
+        text-align: center;
+    }
+
+    .texto-new h1 {
+        font-size: 38px;
+    }
+
+    .descripcion-ari {
+        font-size: 15px;
+    }
+
+
+    /* MOSAICO */
+
+    .mosaico img {
+        height: 180px;
+    }
+
+
+    /* SECCIONES */
+
+    .seccion-contenido {
+        padding: 25px;
+    }
+
+
+    /* FORMULARIOS */
+
+    .contenedor-formulario {
+        padding: 40px 15px;
+    }
+
+    .formulario-card {
+        padding: 30px 22px;
+    }
+
+    .formulario-card h1 {
+        font-size: 27px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-ari {
+        padding: 20px 15px;
+    }
+
+
+    /* WHATSAPP */
+
+    .whatsapp-flotante {
+        right: 18px;
+
+        bottom: 18px;
+
+        width: 50px;
+
+        height: 50px;
+    }
+}
+
+
+/* 
+   RESPONSIVE - CELULARES PEQUEÑOS
+ */
+
+@media (max-width: 480px) {
+
+    .logo-ari {
+        width: 85px;
+    }
+
+    .menu-principal {
+        gap: 5px;
+    }
+
+    .menu-principal a {
+        font-size: 12px;
+
+        padding: 7px 8px;
+    }
+
+    .texto-new h1 {
+        font-size: 32px;
+    }
+
+    .mosaico {
+        gap: 10px;
+    }
+
+    .mosaico img {
+        height: 150px;
+    }
+
+    .formulario-card {
+        padding: 25px 18px;
+    }
+
+    .formulario-card h1 {
+        font-size: 25px;
+    }
+
+    .formulario-descripcion {
+        font-size: 14px;
+    }
+
+}
