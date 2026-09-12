@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión | AriPapelería 💗</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+
+    <header class="encabezado-ari">
+
+        <div class="logo-container">
+
+            <a href="index.html">
+
+                <img
+                    src="img/milogo.png"
+                    alt="Logo de AriPapelería"
+                    class="logo-ari"
+                >
+
+            </a>
+
+        </div>
+
+
+
+        <nav class="menu-principal" aria-label="Navegación principal">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="index.html#packaging">
+                Packaging
+            </a>
+
+            <a href="index.html#planners">
+                Planners
+            </a>
+
+            <a href="index.html#contacto">
+                Contacto
+            </a>
+
+            <a href="register.html">
+                Registrarse
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+        <section
+            class="contenedor-formulario"
+            aria-labelledby="titulo-login"
+        >
+
+            <article class="formulario-card">
+
+                <h1 id="titulo-login">
+                    Bienvenido 💗
+                </h1>
+
+                <p class="formulario-descripcion">
+                    Inicia sesión en tu cuenta de AriPapelería.
+                </p>
+
+
+                <form id="loginForm" novalidate>
+
+                    <div class="campo-formulario">
+
+                        <label for="loginEmail">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            name="email"
+                            autocomplete="email"
+                            placeholder="ejemplo@correo.com"
+                            required
+                        >
+
+                        <small
+                            id="loginEmailError"
+                            class="mensaje-error"
+                        ></small>
+
+                    </div>
+
+
+
+                    <div class="campo-formulario">
+
+                        <label for="loginPassword">
+                            Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            name="password"
+                            autocomplete="current-password"
+                            placeholder="Ingresa tu contraseña"
+                            required
+                        >
+
+                        <small
+                            id="loginPasswordError"
+                            class="mensaje-error"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="campo-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="recordar"
+                            name="recordar"
+                        >
+
+                        <label for="recordar">
+                            Recordarme en este dispositivo
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="boton-formulario"
+                    >
+                        Iniciar sesión
+                    </button>
+
+                    <p
+                        id="mensajeLogin"
+                        class="mensaje-registro"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+
+                <p class="enlace-login">
+
+                    ¿No tienes una cuenta?
+
+                    <a href="register.html">
+                        Crea una aquí
+                    </a>
+
+                </p>
+
+
+
+                <p class="enlace-inicio">
+
+                    <a href="index.html">
+                        ← Volver al inicio
+                    </a>
+
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+
+    <a
+        href="https://wa.me/56964798741"
+        class="whatsapp-flotante"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp"
+    >
+        💬
+    </a>
+
+
+
+    <footer class="footer-ari">
+
+        <p>
+            Síguenos en Instagram:
+
+            <a
+                href="https://www.instagram.com/aripapeleria_/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                @aripapeleria_
+            </a>
+        </p>
+
+        <p>
+            Teléfono:
+
+            <a href="tel:+56964798741">
+                +56 9 6479 8741
+            </a>
+        </p>
+
+        <p>
+            © 2026 AriPapelería. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
